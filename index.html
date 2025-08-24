@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maryam Ikram Portfolio</title>
+  <style>
+    /* ====== CSS styles ====== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0 20px 40px;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 50px 0 30px;
+      background: #0077cc;
+      color: white;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+    section {
+      background: white;
+      margin: 30px auto;
+      max-width: 800px;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #0077cc;
+      margin-top: 0;
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 8px;
+    }
+    ul.skills-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    ul.skills-list li {
+      background: #0077cc;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    #contact button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+    #contact button:hover {
+      background-color: #005fa3;
+    }
+    #emailReveal {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #0077cc;
+      display: none;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 0 10px 20px;
+      }
+      section {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Maryam Ikram</h1>
+    <p>BS Data Science Student | Shopify Developer | Digital Marketer</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Maryam, a passionate student and developer specializing in Shopify, dropshipping, and digital marketing.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Shopify Development</li>
+      <li>Dropshipping</li>
+      <li>Digital Marketing</li>
+      <li>HTML, CSS, JavaScript</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Click the button to reveal my email address:</p>
+    <button id="revealEmailBtn">Show Email</button>
+    <p id="emailReveal">ikrammaryam167@gmail.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/maryamikram" target="_blank" rel="noopener noreferrer">linkedin.com/in/maryamikram</a></p>
+  </section>
+
+  <script>
+    // ====== JavaScript ======
+    const btn = document.getElementById('revealEmailBtn');
+    const email = document.getElementById('emailReveal');
+
+    btn.addEventListener('click', () => {
+      if (email.style.display === 'none' || email.style.display === '') {
+        email.style.display = 'block';
+        btn.textContent = 'Hide Email';
+      } else {
+        email.style.display = 'none';
+        btn.textContent = 'Show Email';
+      }
+    });
+  </script>
+
+</body>
+</html>
